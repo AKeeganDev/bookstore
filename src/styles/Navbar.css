@@ -1,0 +1,40 @@
+.navBar {
+  background-color: aqua;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftLinks {
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+
+.profileIcon {
+  padding: 10px;
+  margin-right: 50px;
+  outline: 1px solid black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.a-link {
+  text-decoration: underline;
+}
+
+.inactive {
+  text-decoration: none;
+}
