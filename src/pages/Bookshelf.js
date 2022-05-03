@@ -1,16 +1,16 @@
 import Book from '../components/Book';
 import BookForm from '../components/BookForm';
 
-const Bookshelf = () => {
-  const state = {
-    books: [
-      {
-        title: 'Title Here',
-        author: 'Author Here',
-      },
-    ],
-  };
+const state = {
+  books: [
+    {
+      title: 'Aaron is Great',
+      author: 'Aaron THE Great',
+    },
+  ],
+};
 
+const Bookshelf = () => {
   const { title, author } = state.books[0];
 
   return (
