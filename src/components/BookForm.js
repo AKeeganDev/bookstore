@@ -13,10 +13,16 @@ const BookForm = () => {
       </label>
       <button
         onClick={(e) => {
+          // prevents page reset
           e.preventDefault();
+
+          // establishes values from the form fields into variables for passing into dispatch
           const newTitle = e.target.parentElement.title.value;
           const newAuthor = e.target.parentElement.author.value;
+
           dispatch(addBook(newTitle, newAuthor));
+
+          // resets the form inputs
           e.target.parentElement.title.value = '';
           e.target.parentElement.author.value = '';
         }}

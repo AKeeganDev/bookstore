@@ -16,7 +16,10 @@ export const addBook = (newTitle, newAuthor) => {
   };
 };
 
-export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: id });
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  payload: id,
+});
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -24,8 +27,8 @@ export default (state = initialState, action) => {
       return { ...state, books: [...state.books, action.payload] };
     }
     case REMOVE_BOOK: {
-      const filteredBooks = state.books.filter((book) => book.id !== action.payload.id);
-      return [...filteredBooks];
+      const filteredBooks = state.books.filter((booke) => booke.id !== action.payload);
+      return { ...state, books: [...filteredBooks] };
     }
     default:
       return state;

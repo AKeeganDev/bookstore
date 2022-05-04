@@ -12,20 +12,17 @@ import BookForm from '../components/BookForm';
 // };
 
 const Bookshelf = () => {
-  // const { title, author } = state.books[0];
   const books = useSelector((state) => state.bookshelf);
-  // const { title, author } = books.books[0];
   return (
     <>
       <ul className="bookshelf">
         {
           books.books.map((book) => (
             <li key={book.id}>
-              <Book title={book.title} author={book.author} />
+              <Book id={book.id} title={book.title} author={book.author} />
             </li>
           ))
         }
-        {/* <Book title={title} author={author} /> */}
       </ul>
       <BookForm />
     </>
