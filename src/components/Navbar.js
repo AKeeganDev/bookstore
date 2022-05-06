@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
+import { BsPersonFill } from 'react-icons/bs';
 import '../styles/Navbar.css';
+import '@fontsource/montserrat';
 
 const Navbar = () => {
   const links = [
@@ -50,7 +52,8 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="profileIcon">A</div>
+      <BsPersonFill className="profileIcon" />
+      {/* <div className="profileIcon">A</div> */}
     </nav>
   );
 };
