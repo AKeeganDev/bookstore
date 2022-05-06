@@ -1,9 +1,20 @@
+:root {
+  --white: #fff;
+  --montserrat: 'Montserrat', sans-serif;
+  --logo-blue: #0290ff;
+  --black-two: #121212;
+  --grey-border: #e8e8e8;
+}
+
 .navBar {
-  background-color: aqua;
-  padding: 10px;
+  background-color: var(--white);
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: var(--montserrat);
+  border-bottom: 1.5px solid var(--grey-border);
+  margin-bottom: 0.938rem;
 }
 
 .leftLinks {
@@ -13,28 +24,53 @@
 }
 
 .profileIcon {
-  padding: 10px;
-  margin-right: 50px;
-  outline: 1px solid black;
+  height: 2rem;
+  width: 2rem;
+  padding: 0.875rem;
+  outline: 1px solid var(--grey-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--logo-blue);
 }
 
-ul {
+.navLinks,
+.bookshelf {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
+}
+
+.navLinks {
   gap: 30px;
+}
+
+.bookshelf {
+  flex-direction: column;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--black-two);
+  font-size: 1rem;
+  letter-spacing: 1.9px;
+  opacity: 50%;
 }
 
 .a-link {
-  text-decoration: underline;
+  opacity: 100%;
 }
 
 .inactive {
   text-decoration: none;
+  opacity: 50%;
+}
+
+.logo {
+  font-size: 1.875rem;
+  color: var(--logo-blue);
+  font-weight: bold;
 }

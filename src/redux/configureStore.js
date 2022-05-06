@@ -7,6 +7,7 @@ import Categories from './categories/categories';
 
 const rootReducer = combineReducers({ bookshelf: Books, checkStatus: Categories });
 const middleWare = applyMiddleware(thunk, logger);
-const store = configureStore({ reducer: rootReducer }, middleWare);
+
+const store = configureStore({ reducer: rootReducer, middleWare });
 
 export default store;
