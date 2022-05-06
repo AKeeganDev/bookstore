@@ -14,6 +14,7 @@
   align-items: center;
   font-family: var(--montserrat);
   border-bottom: 1.5px solid var(--grey-border);
+  margin-bottom: 0.938rem;
 }
 
 .leftLinks {
@@ -26,7 +27,6 @@
   height: 2rem;
   width: 2rem;
   padding: 0.875rem;
-  margin-right: 50px;
   outline: 1px solid var(--grey-border);
   border-radius: 50%;
   display: flex;
@@ -36,12 +36,20 @@
   color: var(--logo-blue);
 }
 
-ul {
+.navLinks,
+.bookshelf {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
+}
+
+.navLinks {
   gap: 30px;
+}
+
+.bookshelf {
+  flex-direction: column;
 }
 
 a {

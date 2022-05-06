@@ -17,7 +17,7 @@ const Bookshelf = () => {
       <ul className="bookshelf">
         {
           books.books.map((book) => (
-            <li key={book.id}>
+            <li className="book" key={book.id}>
               <Book id={book.id} title={book.title} author={book.author} />
             </li>
           ))
