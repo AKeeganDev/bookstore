@@ -30,12 +30,22 @@ export const getBooksFromAPI = () => async (dispatch) => {
   });
 };
 
-export const addBook = (newTitle, newAuthor) => {
+export const addBook = (newTitle, newAuthor) => async (dispatch) => {
+  // preps the new book object for the API
   const newID = uniqueID();
-  return {
+  const bookForAPI = JSON.stringify({
+    item_id: newID, title: newTitle, author: newAuthor, category: 'under Construction',
+  });
+  await fetch(allBooksURL, {
+    method: 'POST',
+    headers: { 'Content-type': 'application/json' },
+    body: bookForAPI,
+  });
+  // sends an object for storage to store
+  dispatch({
     type: ADD_BOOK,
     payload: { id: newID, title: newTitle, author: newAuthor },
-  };
+  });
 };
 
 const initialState = {
