@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
+import '../styles/BookForm.css';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ const BookForm = () => {
         <input type="text" name="author" id="author" placeholder="Add Author..." />
       </label>
       <button
+        className="addBtn"
         onClick={(e) => {
           // prevents page reset
           e.preventDefault();

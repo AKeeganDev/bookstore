@@ -1,0 +1,45 @@
+:root {
+  --very-light-pink: #c4c4c4;
+  --white: #fff;
+  --azure: #0290ff;
+  --grey-border: #e8e8e8;
+}
+
+input::placeholder {
+  color: var(--very-light-pink);
+}
+
+input {
+  width: 20rem;
+  height: 1.188rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 35.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px var(--grey-border);
+  background-color: var(--white);
+}
+
+.addBtn {
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white);
+  width: 11.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 2.125rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+}

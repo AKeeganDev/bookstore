@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@fontsource/montserrat": "^4.5.10",
+    "@fontsource/roboto": "^4.5.5",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",

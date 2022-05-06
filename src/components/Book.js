@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
+// Progressbar
+// react-circular-progress-bar
+
 function Book(props) {
   const { id, title, author } = props;
   const dispatch = useDispatch();
