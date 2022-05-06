@@ -16,14 +16,17 @@ export const fetchBooks = async () => {
   const data = await response.json();
   const books = [];
   Object.entries(data).forEach((book) => {
-    books.push(...book[1]);
-    console.log({ ...book[1], id: book[0] });
+    const bookObj = Object.assign({ id: book[0] }, ...book[1]);
+    console.log(book[0]);
+    console.log(bookObj);
+    books.push(bookObj);
   });
   return books;
 };
 
 export const getBooksFromAPI = () => async (dispatch) => {
   const books = await fetchBooks();
+  console.log(books);
   dispatch({
     type: GET_BOOKS,
     payload: books,
@@ -52,10 +55,18 @@ const initialState = {
   books: [],
 };
 
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  payload: id,
-});
+export const removeBook = (id) => async (dispatch) => {
+  const apiRemoveURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books/${id}`;
+  console.log(id);
+  await fetch(apiRemoveURL, {
+    method: 'DELETE',
+    headers: { 'Content-type': 'application/json' },
+  });
+  dispatch({
+    type: REMOVE_BOOK,
+    payload: id,
+  });
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
