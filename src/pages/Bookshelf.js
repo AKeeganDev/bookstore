@@ -1,18 +1,17 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Book from '../components/Book';
 import BookForm from '../components/BookForm';
-
-// const state = {
-//   books: [
-//     {
-//       title: 'Aaron is Great',
-//       author: 'Aaron THE Great',
-//     },
-//   ],
-// };
+import { getBooksFromAPI } from '../redux/books/books';
 
 const Bookshelf = () => {
   const books = useSelector((state) => state.bookshelf);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooksFromAPI());
+  }, []);
+
   return (
     <>
       <ul className="bookshelf">
