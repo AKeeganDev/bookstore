@@ -7,8 +7,6 @@ const ADD_BOOK = 'bookstore/book/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/book/REMOVE_BOOK';
 const GET_BOOKS = 'bookstore/book/GET_BOOKS';
 
-// sets initial default state for the shelf (empty);
-
 export const fetchBooks = async () => {
   const response = await fetch(
     allBooksURL,
@@ -17,8 +15,6 @@ export const fetchBooks = async () => {
   const books = [];
   Object.entries(data).forEach((book) => {
     const bookObj = Object.assign({ id: book[0] }, ...book[1]);
-    console.log(book[0]);
-    console.log(bookObj);
     books.push(bookObj);
   });
   return books;
@@ -26,7 +22,6 @@ export const fetchBooks = async () => {
 
 export const getBooksFromAPI = () => async (dispatch) => {
   const books = await fetchBooks();
-  console.log(books);
   dispatch({
     type: GET_BOOKS,
     payload: books,
@@ -57,7 +52,6 @@ const initialState = {
 
 export const removeBook = (id) => async (dispatch) => {
   const apiRemoveURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books/${id}`;
-  console.log(id);
   await fetch(apiRemoveURL, {
     method: 'DELETE',
     headers: { 'Content-type': 'application/json' },
