@@ -9,7 +9,7 @@ function App() {
     <div className="body">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Bookshelf />} />
+        <Route path="/bookstore" element={<Bookshelf />} />
         <Route path="/status" element={<CheckStatus />} />
       </Routes>
     </div>
