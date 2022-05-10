@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-coming soon
+https://akeegandev.github.io/bookstore/
 
 
 ## Getting Started
