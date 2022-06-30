@@ -17,7 +17,7 @@ https://akeegandev.github.io/bookstore/
 ## Getting Started
 
 >1) To get started please open your terminal and navigate to whatever directory you house your project repos. 
->2) Once there copy and paste this SSH key (key available soon)
+>2) Once there copy and paste this SSH key `git clone git@github.com:AKeeganDev/bookstore.git`
 >3) A new Directory will be made. From there you can cd (change directory) to /bookstore
 >4) Tun $npm install in the root folder directory to download the required packages
 >4) Run $npm start in order run the project and see it in your default browser
